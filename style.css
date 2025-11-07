@@ -1,0 +1,155 @@
+:root {
+  --primary: rgb(30, 64, 175);         /* Bleu profond */
+  --secondary: rgb(75, 85, 99);        /* Gris anthracite */
+  --background: rgb(243, 244, 246);    /* Gris clair */
+  --accent: rgb(0, 168, 132);          /* Vert WhatsApp */
+  --text: rgb(17, 24, 39);             /* Noir/gris foncé */
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--background);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* HEADER */
+header {
+  background-color: var(--primary);
+  color: white;
+  padding: 1.5rem 2rem;
+  position: relative;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* MENU TOGGLE */
+#menu-toggle {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+/* NAVIGATION */
+nav {
+  display: none;
+  flex-direction: column;
+  background-color: var(--primary);
+  padding: 1rem;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0.5rem 0;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--accent);
+}
+
+nav.active {
+  display: flex;
+}
+
+/* MAIN CONTENT */
+main {
+  padding: 2rem;
+}
+
+.article {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 3rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.article:hover {
+  transform: translateY(-4px);
+}
+
+.article img {
+  max-width: 100%;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+.article h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.article p {
+  margin-bottom: 1rem;
+}
+
+/* DOWNLOAD BUTTON */
+.download {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background-color: var(--accent);
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.download:hover {
+  background-color: rgb(0, 140, 110);
+}
+
+/* FOOTER */
+footer {
+  background-color: var(--secondary);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: text-decoration 0.3s ease;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* RESPONSIVE */
+@media (min-width: 768px) {
+  nav {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  nav a {
+    margin: 0 1rem;
+  }
+
+  #menu-toggle {
+    display: none;
+  }
+}
