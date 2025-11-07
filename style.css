@@ -1,91 +1,47 @@
 :root {
-  --primary: rgb(30, 64, 175);         /* Bleu profond */
-  --secondary: rgb(75, 85, 99);        /* Gris anthracite */
-  --background: rgb(243, 244, 246);    /* Gris clair */
-  --accent: rgb(0, 168, 132);          /* Vert WhatsApp */
-  --text: rgb(17, 24, 39);             /* Noir/gris foncé */
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+  --primary: rgb(30, 64, 175);
+  --secondary: rgb(75, 85, 99);
+  --background: rgb(243, 244, 246);
+  --accent: rgb(0, 168, 132);
+  --text: rgb(17, 24, 39);
 }
 
 body {
+  margin: 0;
   font-family: 'Inter', sans-serif;
   background-color: var(--background);
   color: var(--text);
   line-height: 1.6;
 }
 
-/* HEADER */
 header {
   background-color: var(--primary);
   color: white;
-  padding: 1.5rem 2rem;
-  position: relative;
-  text-align: center;
-}
-
-header h1 {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-}
-
-/* MENU TOGGLE */
-#menu-toggle {
-  background: none;
-  border: none;
-  font-size: 2rem;
-  color: white;
-  cursor: pointer;
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-}
-
-/* NAVIGATION */
-nav {
-  display: none;
-  flex-direction: column;
-  background-color: var(--primary);
-  padding: 1rem;
+  padding: 1rem 2rem;
   text-align: center;
 }
 
 nav a {
+  margin: 0 1rem;
   color: white;
   text-decoration: none;
   font-weight: bold;
-  margin: 0.5rem 0;
-  transition: color 0.3s ease;
 }
 
 nav a:hover {
-  color: var(--accent);
+  text-decoration: underline;
 }
 
-nav.active {
-  display: flex;
-}
-
-/* MAIN CONTENT */
 main {
   padding: 2rem;
 }
 
 .article {
+  margin-bottom: 3rem;
   background: white;
   border-radius: 8px;
   padding: 1.5rem;
-  margin-bottom: 3rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease;
-}
-
-.article:hover {
-  transform: translateY(-4px);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
 .article img {
@@ -94,32 +50,20 @@ main {
   margin-bottom: 1rem;
 }
 
-.article h2 {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.article p {
-  margin-bottom: 1rem;
-}
-
-/* DOWNLOAD BUTTON */
 .download {
   display: inline-block;
-  padding: 0.6rem 1.2rem;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
   background-color: var(--accent);
   color: white;
   text-decoration: none;
   border-radius: 4px;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
 }
 
 .download:hover {
   background-color: rgb(0, 140, 110);
 }
 
-/* FOOTER */
 footer {
   background-color: var(--secondary);
   color: white;
@@ -131,25 +75,106 @@ footer {
 footer a {
   color: var(--accent);
   text-decoration: none;
-  transition: text-decoration 0.3s ease;
 }
 
 footer a:hover {
   text-decoration: underline;
 }
 
-/* RESPONSIVE */
-@media (min-width: 768px) {
-  nav {
-    flex-direction: row;
-    justify-content: center;
+#menu-toggle {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+nav {
+  display: none;
+  flex-direction: column;
+  background-color: var(--primary);
+  padding: 1rem;
+}
+
+nav a {
+  margin: 0.5rem 0;
+}
+
+nav.active {
+  display: flex;
+}
+
+/* Profil professionnel */
+.profil-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: linear-gradient(to right, #f9f9f9, #ffffff);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  font-family: 'Inter', sans-serif;
+  color: #333;
+}
+
+.profil-header h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #1a1a1a;
+}
+
+.profil-header p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.profil-content h3 {
+  font-size: 1.3rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #0077cc;
+}
+
+.profil-content ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 1.5rem;
+}
+
+.profil-content ul li {
+  position: relative;
+  padding-left: 1.2rem;
+  margin-bottom: 0.6rem;
+}
+
+.profil-content ul li::before {
+  content: "▹";
+  position: absolute;
+  left: 0;
+  color: #0077cc;
+  font-weight: bold;
+}
+
+.profil-content p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .profil-container {
+    padding: 1rem;
   }
 
-  nav a {
-    margin: 0 1rem;
+  .profil-header h2 {
+    font-size: 1.5rem;
   }
 
-  #menu-toggle {
-    display: none;
+  .profil-content h3 {
+    font-size: 1.1rem;
   }
 }
