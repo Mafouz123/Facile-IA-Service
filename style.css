@@ -178,3 +178,107 @@ nav.active {
     font-size: 1.1rem;
   }
 }
+:root {
+  --primary: rgb(30, 64, 175);         /* Bleu profond */
+  --secondary: rgb(75, 85, 99);        /* Gris anthracite */
+  --background: rgb(243, 244, 246);    /* Gris clair */
+  --accent: rgb(0, 168, 132);          /* Vert WhatsApp */
+  --text: rgb(17, 24, 39);             /* Noir/gris foncé */
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--background);
+  color: var(--text);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+/* === ARTICLE === */
+.article {
+  background: white;
+  border-radius: 8px;
+  padding: 2rem;
+  margin: 2rem 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.article h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.article h3 {
+  font-size: 1.4rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: var(--primary);
+}
+
+.article p {
+  margin-bottom: 1rem;
+}
+
+.article ul,
+.article ol {
+  margin-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.article li {
+  margin-bottom: 0.5rem;
+}
+
+/* === ACCROCHE === */
+.accroche {
+  font-size: 1.2rem;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+/* === PHRASE CLÉ === */
+.phrase-cle {
+  background-color: #f0fdf4;
+  border-left: 4px solid var(--accent);
+  padding: 1rem;
+  margin: 2rem 0;
+  font-style: italic;
+  font-weight: 500;
+}
+
+/* === IMAGES === */
+.article-image {
+  width: 100%;
+  max-width: 100%;
+  margin: 1.5rem 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* === TABLEAU COMPARATIF === */
+table.comparatif {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+  font-size: 1rem;
+  background-color: white;
+  border: 1px solid #d1d5db;
+}
+
+table.comparatif th,
+table.comparatif td {
+  padding: 1rem;
+  text-align: left;
+  border: 1px solid #d1d5db;
+}
+
+table.comparatif thead {
+  background-color: var(--primary);
+  color: white;
+}
+
+table.comparatif tbody tr:hover {
+  background-color: #f9fafb;
+}
+
